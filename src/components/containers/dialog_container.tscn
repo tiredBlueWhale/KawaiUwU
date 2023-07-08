@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=3 uid="uid://uvyiu3bq6m27"]
+
+[ext_resource type="Script" path="res://src/components/containers/dialog_container_control.gd" id="1_irhqx"]
+[ext_resource type="PackedScene" uid="uid://dsd1ifua7ge6" path="res://src/components/texts/animated_label.tscn" id="2_jufik"]
+[ext_resource type="PackedScene" uid="uid://cxtomrxfjlqtk" path="res://src/components/icons/next_arrow.tscn" id="3_paxn7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmex2"]
+bg_color = Color(0.247059, 0.247059, 0.247059, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3b715"]
+bg_color = Color(0.254902, 0.254902, 0.254902, 0.843137)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="DialogContainer" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_irhqx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Speaker" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 32
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Speaker"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_rmex2")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Speaker/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 4
+
+[node name="AnimatedLabel" parent="VBoxContainer/Speaker/PanelContainer/MarginContainer" instance=ExtResource("2_jufik")]
+custom_minimum_size = Vector2(100, 2.08165e-12)
+layout_mode = 2
+text = "Character"
+horizontal_alignment = 1
+autowrap_mode = 0
+
+[node name="Dialog" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 70)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Dialog"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_3b715")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/Dialog/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="AnimatedLabel" parent="VBoxContainer/Dialog/PanelContainer/MarginContainer" instance=ExtResource("2_jufik")]
+custom_minimum_size = Vector2(2.08165e-12, 150)
+layout_mode = 2
+
+[node name="NextArrow" parent="VBoxContainer/Dialog/PanelContainer/MarginContainer" instance=ExtResource("3_paxn7")]
+layout_mode = 2
+margin = 12

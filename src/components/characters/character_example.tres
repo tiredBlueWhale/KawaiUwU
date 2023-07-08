@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://cejx36ed6kh2i"]
+
+[ext_resource type="Script" path="res://src/models/character.gd" id="1_8y7n3"]
+[ext_resource type="Texture2D" uid="uid://chjb2nj726n6g" path="res://assets/characters/transparent_background_dude.png" id="2_raqi3"]
+
+[resource]
+script = ExtResource("1_8y7n3")
+texture = ExtResource("2_raqi3")
+display_name = "Bob"
+intro_title = "Bob Wallace"
+intro_sub_title = "Farts smell like 
+rotten eggs"

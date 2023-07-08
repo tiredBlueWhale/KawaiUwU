@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://drdx53xrdhtvv"]
+
+[ext_resource type="FontFile" uid="uid://dmbn2h8fsxup5" path="res://assets/fonts/NotoSansSC-Medium.otf" id="1_6jwsw"]
+
+[resource]
+default_font = ExtResource("1_6jwsw")
+default_font_size = 32
+IntroButton/base_type = &"Button"
+IntroButton/font_sizes/font_size = 144
+QuestionButton/base_type = &"Button"
+QuestionButton/font_sizes/font_size = 42

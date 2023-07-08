@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0g8bs30my1j7"]
+
+[ext_resource type="Script" path="res://src/components/questions/question_container_control.gd" id="1_0md2s"]
+[ext_resource type="PackedScene" uid="uid://dh4siy4eamt73" path="res://src/components/questions/question_button.tscn" id="2_pf5b2"]
+
+[node name="QuestionContainer" type="VBoxContainer"]
+custom_minimum_size = Vector2(600, 2.08165e-12)
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.5
+offset_right = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+alignment = 1
+script = ExtResource("1_0md2s")
+
+[node name="QuestionButton" parent="." instance=ExtResource("2_pf5b2")]
+layout_mode = 2
+
+[node name="QuestionButton2" parent="." instance=ExtResource("2_pf5b2")]
+layout_mode = 2

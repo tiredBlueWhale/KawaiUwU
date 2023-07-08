@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd4kb3ck7v22c"]
+
+[ext_resource type="Script" path="res://locale/locale_test_control.gd" id="1_l62xq"]
+
+[node name="LocaleTest" type="Label"]
+text = "Hello world!"
+script = ExtResource("1_l62xq")

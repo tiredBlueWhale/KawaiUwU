@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dogfq3gnf66e7"]
+
+[ext_resource type="Script" path="res://src/components/buttons/background_info_button_control.gd" id="1_r7up7"]
+
+[node name="BackgroundInfoButton" type="Button"]
+offset_right = 100.0
+offset_bottom = 100.0
+script = ExtResource("1_r7up7")
+time_per_letter = null

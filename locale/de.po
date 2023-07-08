@@ -1,0 +1,41 @@
+# Don't remove the two lines below, they're required for gettext to work correctly.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Example of a regular string.
+msgid "Hello world!"
+msgstr "Hallo Welt!"
+
+# Example of a string with pluralization.
+msgid "There is %d apple."
+msgid_plural "There are %d apples."
+msgstr[0] "Hier ist %d Apfel."
+msgstr[1] "Hier sind %d Äpfel."
+
+# Example of a string with a translation context.
+msgctxt "Actions"
+msgid "Close"
+msgstr "Schließen"
+
+# dialog_example_control.gd
+msgid "Hello my good friend, my name is Bob."
+msgstr "Hallo mein Freund, mein Name ist Bob."
+
+msgid "So you prefer %s. Good to know"
+msgstr "Du bevorzugst also %s. Gut zu wissen"
+
+msgid ""
+"Wait ... I just had a Déjà-vu that you picked something different last time"
+msgstr ""
+
+#, fuzzy
+msgid "MessageMultiline"
+msgstr "Multiline"

@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://clwy0vwkafkkx"]
+
+[ext_resource type="Script" path="res://story/backgrounds/background_example_control.gd" id="1_ke2u8"]
+[ext_resource type="PackedScene" uid="uid://bl3b5fnxxw3rt" path="res://src/components/backgrounds/background.tscn" id="2_veypw"]
+[ext_resource type="Texture2D" uid="uid://daxm5yoryjota" path="res://assets/backgrounds/background_16x9.png" id="3_cch7a"]
+[ext_resource type="PackedScene" uid="uid://difw81rxeo42x" path="res://src/components/backgrounds/background_item_container.tscn" id="4_hwrxj"]
+[ext_resource type="PackedScene" uid="uid://dogfq3gnf66e7" path="res://src/components/buttons/background_info_button.tscn" id="5_kkvji"]
+[ext_resource type="LabelSettings" uid="uid://dqjnok7vlufed" path="res://assets/label_settings/info_button_label.tres" id="6_b7enl"]
+[ext_resource type="PackedScene" uid="uid://dmjfdpughk8gx" path="res://src/components/buttons/hidden_button.tscn" id="7_2u58x"]
+
+[node name="BackgroundExample" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ke2u8")
+
+[node name="Background" parent="." instance=ExtResource("2_veypw")]
+layout_mode = 2
+background_texture = ExtResource("3_cch7a")
+background_color = Color(0, 0, 0, 1)
+
+[node name="BackgroundItemContainer" parent="Background" instance=ExtResource("4_hwrxj")]
+layout_mode = 1
+offset_top = 3.95605
+offset_right = 1456.0
+offset_bottom = 819.956
+scale = Vector2(1.31868, 1.31868)
+
+[node name="TreeButton" parent="Background/BackgroundItemContainer" node_paths=PackedStringArray("label") instance=ExtResource("5_kkvji")]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 21.2333
+offset_top = 111.508
+offset_right = 321.233
+offset_bottom = 411.508
+label = NodePath("Label")
+time_per_letter = 0.01
+is_hidden = true
+
+[node name="Label" type="Label" parent="Background/BackgroundItemContainer/TreeButton"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -51.0
+offset_right = 295.0
+offset_bottom = 51.0
+grow_vertical = 2
+text = "This is the BEST tree
+in the world !!!"
+label_settings = ExtResource("6_b7enl")
+
+[node name="StoreButton" parent="Background/BackgroundItemContainer" instance=ExtResource("7_2u58x")]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1008.58
+offset_top = 251.042
+offset_right = 1418.58
+offset_bottom = 635.042
+is_hidden = true
