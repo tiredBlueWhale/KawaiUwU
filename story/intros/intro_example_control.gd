@@ -6,7 +6,7 @@ extends TransitionControl
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var title: Label = $Control/Title
 @onready var sub_title: Label = $Control/SubTitle
-@onready var close_button: Button = $Control/Button
+@onready var close_button: Button = $Button
 
 func on_close():
 	if animation_player.is_playing():
@@ -19,12 +19,13 @@ func play():
 	visible = true
 
 func _ready():
-	visible = false
+#	visible = false
 	title.text = character_control.character.intro_title
 	sub_title.text = character_control.character.intro_sub_title
 	close_button.pressed.connect(on_close)
 
 func _unhandled_key_input(event):
+#	play()
 	if not visible:
 		return
 	if event is InputEventKey:

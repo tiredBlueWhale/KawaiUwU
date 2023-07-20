@@ -1,20 +1,20 @@
 [gd_scene load_steps=14 format=3 uid="uid://b3o1x55peyqho"]
 
 [ext_resource type="Script" path="res://story/dialogs/dialog_example_control.gd" id="1_5s5pe"]
-[ext_resource type="Script" path="res://src/models/save_data.gd" id="2_sjc5h"]
-[ext_resource type="PackedScene" uid="uid://b4gf56ufltuo1" path="res://src/components/containers/save_area.tscn" id="3_iaekg"]
-[ext_resource type="PackedScene" uid="uid://dljvpthaseg8e" path="res://src/components/characters/character_container.tscn" id="3_j13g6"]
+[ext_resource type="Script" path="res://common/models/save_data.gd" id="2_nvwcy"]
 [ext_resource type="PackedScene" uid="uid://clwy0vwkafkkx" path="res://story/backgrounds/background_example.tscn" id="3_tubww"]
-[ext_resource type="PackedScene" uid="uid://b3uf74chntec8" path="res://src/components/characters/character.tscn" id="4_8b4sb"]
-[ext_resource type="PackedScene" uid="uid://baxi1m4gl70lj" path="res://src/components/wrappers/input_wrapper.tscn" id="6_1jlnc"]
-[ext_resource type="PackedScene" uid="uid://dbi23iycij34m" path="res://src/components/containers/input_container.tscn" id="6_na2k2"]
-[ext_resource type="PackedScene" uid="uid://b0g8bs30my1j7" path="res://src/components/questions/question_container.tscn" id="7_6kn8b"]
-[ext_resource type="PackedScene" uid="uid://uvyiu3bq6m27" path="res://src/components/containers/dialog_container.tscn" id="8_ygded"]
+[ext_resource type="PackedScene" uid="uid://b4gf56ufltuo1" path="res://common/containers/save_area.tscn" id="4_xcxsd"]
+[ext_resource type="PackedScene" uid="uid://dljvpthaseg8e" path="res://common/characters/character_container.tscn" id="5_2c00w"]
+[ext_resource type="PackedScene" uid="uid://b3uf74chntec8" path="res://common/characters/character.tscn" id="6_h2n30"]
+[ext_resource type="PackedScene" uid="uid://baxi1m4gl70lj" path="res://common/wrappers/input_wrapper.tscn" id="7_e0djb"]
+[ext_resource type="PackedScene" uid="uid://dbi23iycij34m" path="res://common/containers/input_container.tscn" id="8_rksi1"]
+[ext_resource type="PackedScene" uid="uid://b0g8bs30my1j7" path="res://common/questions/question_container.tscn" id="9_bqim5"]
+[ext_resource type="PackedScene" uid="uid://uvyiu3bq6m27" path="res://common/containers/dialog_container.tscn" id="10_utwc7"]
 [ext_resource type="PackedScene" uid="uid://bjst1gymcuydb" path="res://story/places/store.tscn" id="11_greo8"]
 [ext_resource type="PackedScene" uid="uid://7dkrab0rkkn1" path="res://story/intros/intro_example.tscn" id="16_vdmtr"]
 
 [sub_resource type="Resource" id="Resource_mypj7"]
-script = ExtResource("2_sjc5h")
+script = ExtResource("2_nvwcy")
 userName = "UserName"
 food = ""
 skip_counter = 0
@@ -34,26 +34,26 @@ save_data = SubResource("Resource_mypj7")
 [node name="BackgroundExample" parent="." instance=ExtResource("3_tubww")]
 layout_mode = 2
 
-[node name="SaveArea" parent="." instance=ExtResource("3_iaekg")]
+[node name="SaveArea" parent="." instance=ExtResource("4_xcxsd")]
 layout_mode = 2
 
-[node name="CharacterContainer" parent="SaveArea" instance=ExtResource("3_j13g6")]
+[node name="CharacterContainer" parent="SaveArea" instance=ExtResource("5_2c00w")]
 custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
 layout_mode = 2
 
-[node name="Character" parent="SaveArea/CharacterContainer" instance=ExtResource("4_8b4sb")]
+[node name="Character" parent="SaveArea/CharacterContainer" instance=ExtResource("6_h2n30")]
 position = Vector2(1.04082e-12, 2.08165e-12)
 
-[node name="InputWrapper" parent="SaveArea" instance=ExtResource("6_1jlnc")]
+[node name="InputWrapper" parent="SaveArea" instance=ExtResource("7_e0djb")]
 layout_mode = 2
 
-[node name="InputContainer" parent="SaveArea/InputWrapper" instance=ExtResource("6_na2k2")]
+[node name="InputContainer" parent="SaveArea/InputWrapper" instance=ExtResource("8_rksi1")]
 layout_mode = 2
 
-[node name="QuestionContainer" parent="SaveArea/InputWrapper/InputContainer" instance=ExtResource("7_6kn8b")]
+[node name="QuestionContainer" parent="SaveArea/InputWrapper/InputContainer" instance=ExtResource("9_bqim5")]
 layout_mode = 2
 
-[node name="DialogContainer" parent="SaveArea/InputWrapper/InputContainer" instance=ExtResource("8_ygded")]
+[node name="DialogContainer" parent="SaveArea/InputWrapper/InputContainer" instance=ExtResource("10_utwc7")]
 layout_mode = 2
 
 [node name="Store" parent="." instance=ExtResource("11_greo8")]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cguwvcem6kuf7"]
+
+[ext_resource type="Script" path="res://main_control.gd" id="1_y8k43"]
+[ext_resource type="PackedScene" uid="uid://nhbcc3i7ptja" path="res://common/menu/menu.tscn" id="2_sclfp"]
+
+[node name="App" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y8k43")
+
+[node name="Menu" parent="." instance=ExtResource("2_sclfp")]
+layout_mode = 2

@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://7dkrab0rkkn1"]
 
 [ext_resource type="Script" path="res://story/intros/intro_example_control.gd" id="1_8yslj"]
-[ext_resource type="PackedScene" uid="uid://b3uf74chntec8" path="res://src/components/characters/character.tscn" id="4_alljl"]
+[ext_resource type="PackedScene" uid="uid://b3uf74chntec8" path="res://common/characters/character.tscn" id="4_alljl"]
 [ext_resource type="Shader" path="res://shaders/outline.gdshader" id="4_jqfef"]
-[ext_resource type="Script" path="res://src/components/texts/pivot_center_label.gd" id="5_3lnjb"]
+[ext_resource type="Script" path="res://common/texts/pivot_center_label.gd" id="5_3lnjb"]
 [ext_resource type="LabelSettings" uid="uid://4ojcl6oyf76k" path="res://assets/label_settings/intro_title.tres" id="5_k8uwx"]
 [ext_resource type="LabelSettings" uid="uid://bqrrwrir0bp5j" path="res://assets/label_settings/intro_sub_title.tres" id="6_teqpn"]
-[ext_resource type="Script" path="res://src/components/buttons/pivot_center_button.gd" id="7_rmyw3"]
+[ext_resource type="Script" path="res://common/buttons/pivot_center_button.gd" id="7_rmyw3"]
 
 [sub_resource type="Animation" id="Animation_mubnl"]
 length = 0.001
@@ -73,7 +73,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Control/Button:scale")
+tracks/5/path = NodePath("Button:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -150,7 +150,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Control/Button:scale")
+tracks/5/path = NodePath("Button:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -171,13 +171,15 @@ shader = ExtResource("4_jqfef")
 shader_parameter/color = Color(1, 1, 1, 1)
 shader_parameter/width = 5.0
 
-[node name="IntroExample" type="MarginContainer"]
+[node name="IntroExample" type="Control"]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_8yslj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -186,12 +188,24 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 color = Color(0.313726, 0.619608, 0.333333, 1)
 
 [node name="Control" type="Control" parent="."]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -960.0
+offset_right = 960.0
+offset_bottom = 1080.0
+grow_horizontal = 2
 mouse_filter = 2
 
 [node name="ColorRect2" type="ColorRect" parent="Control"]
@@ -239,12 +253,18 @@ text = "Additonal info about the character on random sentence
 label_settings = ExtResource("6_teqpn")
 autowrap_mode = 3
 
-[node name="Button" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 809.0
-offset_top = 722.0
-offset_right = 1109.0
-offset_bottom = 940.0
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.808
+anchor_right = 0.5
+anchor_bottom = 0.808
+offset_left = -150.0
+offset_top = -218.0
+offset_right = 150.0
+grow_horizontal = 2
+grow_vertical = 0
 pivot_offset = Vector2(150, 109)
 theme_type_variation = &"IntroButton"
 text = "OK"

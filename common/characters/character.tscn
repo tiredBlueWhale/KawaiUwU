@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3uf74chntec8"]
+
+[ext_resource type="Script" path="res://common/characters/character_control.gd" id="1_fknf8"]
+[ext_resource type="Texture2D" uid="uid://chjb2nj726n6g" path="res://assets/characters/transparent_background_dude.png" id="2_poknx"]
+[ext_resource type="Resource" uid="uid://cejx36ed6kh2i" path="res://common/characters/character_example.tres" id="3_s881r"]
+
+[node name="Character" type="Sprite2D"]
+position = Vector2(964, 1047)
+texture = ExtResource("2_poknx")
+centered = false
+offset = Vector2(-512, -1024)
+script = ExtResource("1_fknf8")
+character = ExtResource("3_s881r")

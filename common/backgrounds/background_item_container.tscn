@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://difw81rxeo42x"]
+
+[ext_resource type="Script" path="res://common/backgrounds/background_item_container_control.gd" id="1_pewok"]
+[ext_resource type="PackedScene" uid="uid://bw1v0a2vaktml" path="res://common/debug/border.tscn" id="2_oheaq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nro5i"]
+resource_local_to_scene = true
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 0, 0, 1)
+
+[node name="BackgroundItemContainer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_pewok")
+
+[node name="Border" parent="." instance=ExtResource("2_oheaq")]
+visible = false
+layout_mode = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_nro5i")

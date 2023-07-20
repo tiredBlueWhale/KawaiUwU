@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://tnwfnmn84p70"]
 
-[ext_resource type="Script" path="res://src/models/character.gd" id="1_260a5"]
+[ext_resource type="Script" path="res://common/models/character.gd" id="1_260a5"]
 [ext_resource type="Texture2D" uid="uid://chjb2nj726n6g" path="res://assets/characters/transparent_background_dude.png" id="2_lk2xi"]
 
 [resource]

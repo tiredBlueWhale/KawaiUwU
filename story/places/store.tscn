@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjst1gymcuydb"]
 
 [ext_resource type="Script" path="res://story/places/store_control.gd" id="1_bmk4j"]
-[ext_resource type="PackedScene" uid="uid://bl3b5fnxxw3rt" path="res://src/components/backgrounds/background.tscn" id="1_lsasi"]
-[ext_resource type="PackedScene" uid="uid://difw81rxeo42x" path="res://src/components/backgrounds/background_item_container.tscn" id="2_osovc"]
+[ext_resource type="PackedScene" uid="uid://bl3b5fnxxw3rt" path="res://common/backgrounds/background.tscn" id="1_lsasi"]
+[ext_resource type="PackedScene" uid="uid://difw81rxeo42x" path="res://common/backgrounds/background_item_container.tscn" id="2_osovc"]
 [ext_resource type="Texture2D" uid="uid://baqiy4xato72r" path="res://assets/backgrounds/0_0-8.png" id="2_xk8s5"]
 
 [node name="Store" type="MarginContainer"]

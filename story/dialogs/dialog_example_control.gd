@@ -28,7 +28,7 @@ func start():
 		SpeakerText.new("???"),
 #		Dialog.new([tr_n("There is %d apple.", "There are %d apples.", 1) % 1, "blub"]),
 #		Dialog.new([tr_n("There is %d apple.", "There are %d apples.", 10) % 10]),
-		Dialog.new("I will tell you now a long long story").disable_skip().speed(.5),
+#		Dialog.new("I will tell you now a long long story").disable_skip().speed(.5),
 		Dialog.new("Hello my good friend, my name is Bob."),
 		Dialog.new("And I just farted").new_line().auto(),
 		Dialog.new("...").disable_input().speed(1).append(),
